@@ -1,3 +1,15 @@
+This version of the SDK corresponds to the version of the firmware (3.8.4) that we have installed on the robot.
+SDK version and firmware version must match. In order to install the matching sdk, use the command 
+pip install "git+https://github.com/cbrahana-insyte/fairino-python-sdk.git@pip-install-patch#subdirectory=linux/fairino"
+on a linux computer. No windows build is provided. You can add this as a dependency in your python projects as well.
+Using pyproject.toml
+[project]
+dependencies = [
+    "fairino @ git+https://github.com/cbrahana-insyte/fairino-python-sdk.git@pip-install-patch#subdirectory=linux/fairino",
+]
+Using uv
+[tool.uv.sources]
+fairino = { git = "https://github.com/cbrahana-insyte/fairino-python-sdk.git", rev = "pip-install-patch", subdirectory = "linux/fairino" }
 ===================================================================
 V2.0.8-robot-v3.7.8 2024.01.20 简介：Python SDK V2.0.8版本，适配法奥机器人V3.7.8版本。
 	1.由本版本开始维护此版本更新表；
