@@ -1,0 +1,8 @@
+[build-system]
+requires = ["setuptools>=68", "cython"]
+#build-backend = "setuptools.backends.legacy:build"
+build-backent = "setuptools.build_meta"
+
+[project]
+name = "fairino"
+version = "2.1.4"
